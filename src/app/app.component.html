@@ -1,0 +1,224 @@
+
+<!--<hitachi-train></hitachi-train>-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galleon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+    <link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../../assets/css/responsive.css" rel="stylesheet" type="text/css">
+    
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <main class="main-content">
+        <section class="left-pannel">
+            <h3>Galleon Fog Computing</h3>
+            <ul class="nav nav-tabs">
+                <li [ngClass]="{'active': architecture=='FUNCTIONAL'}"><a (click)="architectureViewChange('FUNCTIONAL')">Functional Architecture</a></li>
+                <li [ngClass]="{'active': architecture=='SOFTWARE'}"><a (click)="architectureViewChange('SOFTWARE'); getSoftwareArchitectureView();">Software Architecture</a></li>
+            </ul>
+            <!-- nav ends here -->
+            <div class="tab-content">
+                <div [ngClass]="{'in active': architecture=='FUNCTIONAL'}" class="tab-pane fade">
+                    <div class="content-holder">
+                        <h5>MULTIPLE DATA SOURCES</h5>
+                        <div class="head-con"><span>TRAIN</span></div>
+                        <div class="links-con">
+                            <ul>
+                                <li id = b ><a href="javascript:;">Sensor Data</a></li>
+                                <li><a href="javascript:;">Network Rail Data</a></li>
+                                <li><a href="javascript:;">CCTV Feed</a></li>
+                                <li><a href="javascript:;">Passenger Information</a></li>
+                            </ul>
+
+
+
+                        </div>
+                    </div>
+                    <!-- content holder ends here -->
+                    <div class="content-holder">
+                        <h5>EDGE</h5>
+                        <div class="head-con"><span>ON-BOARD SERVER</span></div>
+                        <div class="links-con">
+                            <ul>
+                                <li><a href="javascript:;">Data Ingetion, Storage</a></li>
+                                <li class="blue"><a href="javascript:;">Edge Analytics</a></li>
+                                <li class="blue"><a href="javascript:;">Network Analytics</a></li>
+                                <li class="blue"><a href="javascript:;">Event Based Data Management</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- content holder ends here -->
+                    <div class="content-holder">
+                        <h5>FOG</h5>
+                        <div class="head-con"><span>STATION / DEPOT <br> SERVER </span></div>
+                        <div class="links-con">
+                            <ul>
+                                <li (click)="getstartVideo()"><a href="javascript:;">Distributed Storage</a></li>
+                                <li class="blue"><a href="javascript:;">Distributed Analytics</a></li>
+                                <li><a href="javascript:;">Distributed Control</a></li>
+                                <li class="blue"><a href="javascript:;">Distributed Networking</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- content holder ends here -->
+                    <div class="content-holder">
+                        <h5>HITAICHI RAIL CLOUD</h5>
+                        <div class="head-con"><span>BACK OFFICE</span></div>
+                        <div class="links-con">
+                            <ul>
+                                <li><a href="javascript:;">Cloud Analytics & BI</a></li>
+                                <li class="blue"><a href="javascript:;">Dashboard, Visualization </a></li>
+                                <li><a href="javascript:;">Condition Monitoring</a></li>
+                                <li id = a class="blue" onclick="getstartVideo()"><a href="javascript:;">Predictive Maintenance</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- content holder ends here -->
+                </div>
+
+
+
+                <div  [ngClass]="{'in active': architecture=='SOFTWARE'}" class="tab-pane fade">
+                    <div class="img-block" >
+                        <h6>EDGE</h6>
+                        <img id="EdgeImage" src="../../assets/img/edge.png" alt="edge">
+                    </div>
+                    <!-- img block ends here -->
+                    <div class="img-block" >
+                        <h6>CLOUD</h6>
+                        <img id="CloudImage" src="../../assets/img/cloud.png" alt="edge">
+                    </div>
+                    <!-- img block ends here -->
+                    <div class="img-block" >
+                        <h6>FOG</h6>
+                        <img id="FogImage" src="../../assets/img/fog.png" alt="edge">
+                    </div>
+
+                    <div class="img-block" >
+                        <h6>EDGE</h6>
+                        <img id="EdgeImage1" src="../../assets/img/edgeme.png" alt="edge">
+                    </div>
+                    <!-- img block ends here -->
+                </div>
+            </div>
+            <!-- tab pane ends here -->
+        </section>
+        <!-- left pannel ends here -->
+        <section class="content-con">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 center-con">
+                        <!--<ngbd-carousel-basic></ngbd-carousel-basic>-->
+
+
+                <ngb-carousel >
+
+                        <ng-template ngbSlide *ngIf="footerView=='SPATIAL' && startVideo">
+
+
+                                <video autoplay controls class="slider-video">
+                                    <source src="../../assets/img/main_video.mp4" type="video/mp4">
+                                    <source src="mov_bbb.ogg" type="video/ogg"> Your browser does not support HTML5 video.
+                                   
+                                </video>
+                                
+                        </ng-template>
+
+                        <ng-template ngbSlide *ngIf="footerView=='DEPLOYMENT'">
+                             <img src="../../assets/img/hitachi-slider-Image.jpg" style="width:100%; height:350px">       
+                        </ng-template>
+
+                        <ng-template ngbSlide *ngIf="footerView=='ACTUAL'">
+                             <img src="../../assets/img/new.jpg" style="width:100%; height:350px">       
+                        </ng-template>
+
+                </ngb-carousel>
+
+                        <!-- carousel ends here -->
+                        <div class="tab-block">
+                            <ul class="nav nav-tabs">
+                                <li [ngClass]="{'active': footerView=='SPATIAL'}"><a (click)="footerViewChange('SPATIAL')">Geo Spatial View</a></li>
+                                <li [ngClass]="{'active': footerView=='DEPLOYMENT'}"><a (click)="footerViewChange('DEPLOYMENT')">Deployment View</a></li>
+                                <li [ngClass]="{'active': footerView=='ACTUAL'}"><a  (click)="footerViewChange('ACTUAL')">Actual View</a></li>
+                            </ul>
+                            <!-- nav ends here -->
+                            <div class="tab-content">
+                                <div  [ngClass]="{'in active': footerView=='SPATIAL'}" class="tab-pane fade">
+                                     <img id="spatialmap" src="../../assets/img/geo_map.png" alt="geo-spatial-view">
+                                </div>
+
+                                <div *ngIf="footerView=='DEPLOYMENT'" [ngClass]="{'in active': footerView=='DEPLOYMENT'}" class="tab-pane fade">
+                                    <div class="img-block">
+                                        <video autoplay controls>
+                                            <source src="../../assets/img/deployment.mp4" type="video/mp4">
+                                            <source src="mov_bbb.ogg" type="video/ogg"> Your browser does not support HTML5 video.
+                                        </video>
+                                    </div>
+                                    <!-- img block ends here -->
+                                </div>
+
+                                <!--<div *ngIf="footerView=='ACTUAL'" [ngClass]="{'in active': footerView=='ACTUAL'}" class="tab-pane fade">
+                                    <div class="img-block">
+                                      <video autoplay controls>
+                                            <source src="../../assets/img/deployment.mp4" type="video/mp4">
+                                            <source src="mov_bbb.ogg" type="video/ogg"> Your browser does not support HTML5 video.
+                                        </video>  
+                                    </div>
+                                   
+                                </div>-->
+
+                            </div>
+                            <!-- tab pane ends here -->
+                        </div>
+                        <!-- tab block ends here  -->
+                    </div>
+
+                    <div [ngClass]="{'in active': architecture=='SOFTWARE'}" class="col-xs-12 col-sm-12 col-md-12 col-lg-4 right-pannel">
+                        <div class="img-block">
+                            <img id="right-1" src="../../assets/img/right-1.jpg" alt="right-1">
+                        </div>
+                        <!-- img block ends here -->
+                        <div class="img-block">
+                            <img id="right-1" src="../../assets/img/right-2.jpg" alt="right-2">
+                        </div>
+                        <!-- img block ends here -->
+                        <div class="img-block">
+                            <img id="right-1" src="../../assets/img/right-3.jpg" alt="right-3">
+                        </div>
+                        <!-- img block ends here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- content con ends here -->
+    </main>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+       $("#b").click(function(){
+        $('#result').load('pages/page1.html');
+         //alert("Thanks for visiting!");
+       });
+    </script>
+    <!-- main content ends here -->
+    <!-- Scripts starts here -->
+    <script src="../../assets/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../assets/js/custom.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.4.min.js" type="text/javascript"></script>
+
+</body>
+
+</html>

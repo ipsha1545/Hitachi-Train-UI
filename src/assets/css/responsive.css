@@ -1,0 +1,63 @@
+
+@media only screen and (min-width:1800px)  and (max-width:1920px) {
+    body {  }
+}
+@media only screen and (max-width:1600px) {
+.left-pannel h3 { font-size:24px;}
+.content-con { width: 73%;}
+.head-con span { top: 80px;}
+
+video.slider-video , img.slider-img{ width: 100%; height:430px;}
+}
+@media only screen and (max-width:1370px) {
+.content-con { width: 73%;}
+.nav-tabs li a { font-size: 13px; padding:6px 10px; }
+.links-con ul li a {  padding: 6px 10px 6px 5px;}
+.links-con, .head-con { height: 132px;}
+.head-con span { top: 58px;}
+.links-con ul li, .head-con span { font-size: 12px;}
+.tab-content .img-block img { width: 64%;}
+.content-holder h5 { margin-top: 15px;}
+.center-con { width: 67%;}
+.right-pannel { width: 33%;}
+ video.slider-video {  height: 360px;}
+  img.slider-img {  height: 360px;}
+.tab-content video { height: 415px;}
+.tab-block .tab-content img { height: 420px;}
+}
+@media only screen and (max-width:1280px) {
+
+
+}
+@media only screen and (max-width:1199px) {
+.content-con {  width: 65%;}
+.right-pannel .img-block {   float: left; margin-bottom: 15px; margin-left: 1%; width: 32.5%;}
+.right-pannel .img-block:first-child { margin-left: 0;}
+img.slider-img{ height: 400px;}
+.center-con,.right-pannel  { width: 100%;}
+
+}
+@media only screen and (max-width:991px) {
+.content-con {  width: 60%;}
+.links-con ul li a { font-size: 11px;  padding: 5px 10px 5px 5px;}
+.links-con, .head-con {  height: 119px;}
+.content-holder h5 { margin-top: 15px;}
+.tab-block .tab-content img {   height: 225px;}
+.head-con span {  font-size: 12px;  top: 54px;}
+.nav-tabs li a {font-size: 12px;padding: 6px 7px;}
+}
+@media only screen and (max-width:767px) {
+.content-con, .left-pannel { width: 100%; display: inline-block;}
+.carousel .carousel-inner img { height: auto;}
+.right-pannel .img-block { width: 100%; margin: 0 0 10px;}
+.content-con .container-fluid { padding-left: 15px;}
+.carousel-caption h5 { font-size: 14px; margin: 0;}
+.nav-tabs li a { font-size: 12px;}
+.left-pannel h3 { font-size: 22px;}
+.links-con { width: 68%;}
+video.slider-video, .tab-content video, .tab-block .tab-content img { height: auto;}
+}
+@media only screen and (max-width:479px) {
+
+}
+@media only screen and (max-width:320px) {}
